@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SambaLite FAQ - Часто задаваемые вопросы</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .language-selector {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            margin-bottom: 30px;
+        }
+        .faq-item h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SambaLite FAQ</h1>
+        <p>Часто задаваемые вопросы и решения по подключению к Samba с SambaLite</p>
+    </header>
+
+    <div class="language-selector">
+        <a href="faq.html">English</a> | 
+        <a href="faq_de.html">Deutsch</a> | 
+        <a href="faq_ru.html">Русский</a>
+    </div>
+
+    <div class="container">
+        <div class="faq-item">
+            <h3>1. Я не могу подключиться к своему Samba-серверу. Что делать?</h3>
+            <ul>
+                <li>Тщательно проверьте IP-адрес и имя ресурса.</li>
+                <li>Убедитесь, что сервер находится в той же сети, что и ваше устройство.</li>
+                <li>Проверьте подключение с помощью другого Samba-клиента (например, <code>smbclient</code> или VLC), чтобы исключить проблемы с сервером.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>2. Ошибка: "NT_STATUS_LOGON_FAILURE" или "Ошибка аутентификации"</h3>
+            <ul>
+                <li>Проверьте имя пользователя и пароль.</li>
+                <li>Обратите внимание на регистр символов (заглавные/строчные).</li>
+                <li>Если вы хотите подключиться без учетных данных, общий ресурс должен быть настроен с параметром <strong>guest ok = yes</strong>.</li>
+                <li>Убедитесь, что пользователь существует на Samba-сервере и у него установлен пароль Samba (<code>sudo smbpasswd &lt;username&gt;</code>).</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>3. Я не могу создавать папки или загружать файлы</h3>
+            <ul>
+                <li>Проверьте, нет ли в настройках общего ресурса параметра <strong>read only = yes</strong>. Запись возможна только при <strong>read only = no</strong>.</li>
+                <li>Убедитесь, что у общей папки правильные права на запись (например, <code>chmod 777</code> для тестирования).</li>
+                <li>Пользователь, под которым вы входите, должен иметь права на запись на сервере.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>4. Гостевой доступ (анонимный вход) не работает</h3>
+            <ul>
+                <li>Ресурс должен быть настроен с параметром <strong>guest ok = yes</strong>.</li>
+                <li>В секции <code>[global]</code> добавьте <strong>map to guest = Bad User</strong>.</li>
+                <li>Убедитесь, что существует гостьвая учетная запись (по умолчанию <code>nobody</code>).</li>
+                <li>Папка должна быть доступна для чтения гостевой учетной записи (<code>chmod 755</code> и <code>chown nobody:nogroup &lt;папка&gt;</code>).</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>5. Ошибка: "NT_STATUS_NO_SUCH_USER" или гостевой доступ запрещен</h3>
+            <ul>
+                <li>Проверьте, что пользователь правильно создан (<code>sudo smbpasswd -a &lt;username&gt;</code>).</li>
+                <li>Для гостевого доступа смотрите предыдущий пункт.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>6. Я не вижу ресурс в списке доступных ресурсов</h3>
+            <ul>
+                <li>Убедитесь, что в общем ресурсе установлен параметр <strong>browseable = yes</strong>.</li>
+                <li>Проверьте, не блокирует ли доступ брандмауэр (порт 445/TCP должен быть открыт).</li>
+                <li>Не все клиенты автоматически показывают все ресурсы – в SambaLite может понадобиться ввести имя ресурса вручную.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>7. Как создать логи сервера для устранения неполадок?</h3>
+            <ul>
+                <li>Увеличьте уровень логов в smb.conf (<code>log level = 3</code> в секции <code>[global]</code>).</li>
+                <li>Логи обычно находятся в каталоге <code>/var/log/samba/</code>.</li>
+                <li>Обычная команда для просмотра логов: <code>cat /var/log/samba/log.smbd</code> или <code>cat /var/log/samba/log.&lt;имя_клиента&gt;</code>.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>8. Как добавить нового пользователя?</h3>
+            <pre>sudo useradd -M -s /sbin/nologin &lt;username&gt;
+sudo smbpasswd -a &lt;username&gt;</pre>
+        </div>
+
+        <div class="faq-item">
+            <h3>9. Мой ресурс виден в сети, но я не могу его открыть</h3>
+            <ul>
+                <li>Проверьте права доступа к ресурсу в smb.conf.</li>
+                <li>Убедитесь, что пользователь разрешен для доступа (<code>valid users = &lt;username&gt;</code> в секции общий ресурс).</li>
+                <li>Проверьте, чтобы права файловой системы Linux соответствовали пользователю.</li>
+            </ul>
+        </div>
+
+        <div class="faq-item">
+            <h3>10. Как включить гостевой доступ для ресурса?</h3>
+            <pre>[public]
+   path = /srv/public
+   browseable = yes
+   guest ok = yes
+   read only = yes</pre>
+            <p>И в секции <code>[global]</code>:</p>
+            <pre>map to guest = Bad User
+guest account = nobody</pre>
+        </div>
+    </div>
+
+    <div class="container">
+        <p><a href="index_ru.html">← Вернуться на главную</a></p>
+    </div>
+
+    <footer>
+        <p>Этот FAQ будет регулярно обновляться.</p>
+        <p>&copy; 2025 Участники проекта SambaLite. Лицензия Apache 2.0.</p>
+    </footer>
+</body>
+</html>
