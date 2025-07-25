@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SambaLite</string>
+    <string name="add_connection">Добавить подключение</string>
+    <string name="system_monitor">Системный монитор</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Добро пожаловать в SambaLite</string>
+    <string name="welcome_subtitle">Подключайтесь к вашим ресурсам SMB/CIFS легко и безопасно. Нажмите кнопку +, чтобы добавить первое подключение.</string>
+    <string name="your_connections">Ваши подключения</string>
+
+    <!-- Content Descriptions for Accessibility -->
+    <string name="content_desc_connection_status">Статус подключения</string>
+    <string name="content_desc_more_options">Дополнительные параметры</string>
+    <string name="content_desc_file_type_icon">Значок типа файла</string>
+    <string name="content_desc_selected">Выбрано</string>
+    <string name="content_desc_share">Поделиться</string>
+    <string name="content_desc_refresh_system_info">Обновить системную информацию</string>
+
+    <!-- Menu Items -->
+    <string name="menu_refresh">Обновить</string>
+
+    <!-- Example Content -->
+    <string name="example_ip">192.168.1.100</string>
+    <string name="example_status">SMB: ✓ NetBIOS: ✓ (15 мс)</string>
+    <string name="example_share_name">Документы</string>
+
+    <!-- Connection Dialog -->
+    <string name="connection_name">Имя подключения</string>
+    <string name="server">Сервер (IP или имя хоста)</string>
+    <string name="share_name">Имя ресурса</string>
+    <string name="username">Имя пользователя</string>
+    <string name="password">Пароль</string>
+    <string name="domain">Домен (необязательно)</string>
+    <string name="port">Порт</string>
+    <string name="connect">Подключить</string>
+    <string name="edit">Изменить</string>
+    <string name="test_connection">Проверить подключение</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="add_new_connection">Добавить новое подключение</string>
+    <string name="edit_connection">Изменить подключение</string>
+
+    <!-- Validation Messages -->
+    <string name="error_name_required">Имя подключения обязательно</string>
+    <string name="error_server_required">Имя сервера обязательно</string>
+    <string name="error_share_required">Имя ресурса обязательно</string>
+
+    <!-- Delete Dialog -->
+    <string name="delete_connection">Удалить подключение</string>
+    <string name="confirm_delete_connection">Вы уверены, что хотите удалить подключение \'%1$s\'?</string>
+    <string name="delete">Удалить</string>
+    <string name="connection_deleted">Подключение \'%1$s\' удалено</string>
+    <string name="undo">Отменить</string>
+
+    <!-- File Browser -->
+    <string name="empty_directory">Эта папка пуста</string>
+    <string name="loading_files">Загрузка файлов…</string>
+    <string name="error_loading_files">Ошибка загрузки файлов</string>
+    <string name="parent_directory">Родительский каталог</string>
+    <string name="file_browser_title">Файлы</string>
+    <string name="search_files">Поиск файлов</string>
+    <string name="search_title">Поиск</string>
+    <string name="searching">Поиск…</string>
+    <string name="searching_files">Поиск файлов…</string>
+    <string name="search_results">Результаты поиска</string>
+    <string name="no_search_results">Файлы, соответствующие вашему запросу, не найдены</string>
+    <string name="search_query_hint">Введите поисковый запрос</string>
+    <string name="search_wildcard_hint">Поддерживаются шаблоны: * (любые символы), ? (один символ)</string>
+    <string name="search_type">Искать</string>
+    <string name="search_type_all">Все элементы</string>
+    <string name="search_type_files">Только файлы</string>
+    <string name="search_type_folders">Только папки</string>
+    <string name="include_subfolders">Включая подпапки</string>
+    <string name="search">Поиск</string>
+    <string name="cancel_search">Отменить поиск</string>
+
+    <!-- Download -->
+    <string name="download">Скачать</string>
+    <string name="downloading">Скачивание…</string>
+    <string name="download_success">Файл успешно скачан</string>
+    <string name="download_error">Ошибка скачивания файла</string>
+    <string name="file_not_found">Файл \"%1$s\" не найден на сервере. Проверьте, существует ли файл, и попробуйте снова.</string>
+    <string name="save_file">Сохранить файл</string>
+    <string name="file_options">Параметры файла</string>
+
+    <!-- Upload -->
+    <string name="upload">Загрузить</string>
+    <string name="uploading">Загрузка…</string>
+    <string name="upload_success">Файл успешно загружен</string>
+    <string name="upload_error">Ошибка загрузки файла</string>
+    <string name="select_file">Выберите файл для загрузки</string>
+    <string name="file_exists_title">Файл уже существует</string>
+    <string name="file_exists_message">Файл \"%1$s\" уже существует. Хотите перезаписать его?</string>
+    <string name="file_exists_individual_message">Файл \"%1$s\" уже существует на сервере. Хотите перезаписать его или пропустить?</string>
+    <string name="overwrite">Перезаписать</string>
+    <string name="skip_file">Пропустить файл</string>
+
+    <!-- Folder Creation -->
+    <string name="create_folder">Создать папку</string>
+    <string name="create_folder_dialog_title">Создать новую папку</string>
+    <string name="folder_name">Имя папки</string>
+    <string name="folder_created">Папка успешно создана</string>
+    <string name="folder_creation_error">Ошибка создания папки</string>
+
+    <!-- Sorting -->
+    <string name="sort">Сортировка</string>
+    <string name="sort_dialog_title">Сортировать файлы</string>
+    <string name="sort_by">Сортировать по</string>
+    <string name="sort_by_name">Имени</string>
+    <string name="sort_by_date">Дате</string>
+    <string name="sort_by_size">Размеру</string>
+    <string name="directories_first">Сначала папки</string>
+
+    <!-- Rename -->
+    <string name="rename">Переименовать</string>
+    <string name="rename_dialog_title">Переименовать файл</string>
+    <string name="new_name">Новое имя</string>
+    <string name="rename_success">Файл успешно переименован</string>
+    <string name="rename_error">Ошибка переименования файла</string>
+
+    <!-- Delete -->
+    <string name="delete_file">Удалить</string>
+    <string name="delete_file_dialog_title">Удалить файл</string>
+    <string name="confirm_delete_file">Вы уверены, что хотите удалить \'%1$s\'?</string>
+    <string name="delete_success">Файл успешно удален</string>
+    <string name="delete_error">Ошибка удаления файла</string>
+    <string name="file_exists">Файл существует</string>
+    
+    <!-- Folder Upload Options -->
+    <string name="zip_transfer_title">Загрузка папки</string>
+    <string name="zip_upload_folder">Загрузить папку как ZIP</string>
+    <string name="zip_download_folder">Загрузить содержимое папки</string>
+    <string name="creating_zip">Создание ZIP-архива…</string>
+    <string name="uploading_zip">Загрузка ZIP-архива…</string>
+    <string name="uploading_folder_contents">Загрузка содержимого папки…</string>
+    <string name="processing_files">Обработка файлов…</string>
+    <string name="zip_upload_success">Папка успешно загружена как ZIP</string>
+    <string name="folder_contents_upload_success">Содержимое папки успешно загружено</string>
+    <string name="zip_upload_error">Ошибка загрузки ZIP-архива</string>
+    <string name="folder_contents_upload_error">Ошибка загрузки содержимого папки</string>
+    <string name="select_folder_to_upload">Выберите папку для загрузки как ZIP</string>
+    <string name="select_folder_contents_to_upload">Выберите папку для загрузки ее содержимого</string>
+    <string name="upload_progress_files">Загрузка %1$d из %2$d файлов</string>
+    <string name="upload_incomplete_warning">Загрузка не завершена. Некоторые файлы могли не передаться.</string>
+    <string name="cleanup_incomplete_upload">Очистка после незавершенной загрузки…</string>
+    <string name="folder_structure_created">Структура папок успешно создана</string>
+    <string name="verifying_upload_integrity">Проверка целостности загрузки…</string>
+
+    <!-- Enhanced UI Strings -->
+    <string name="success">Успешно</string>
+    <string name="retry">Повторить</string>
+    <string name="ok">OK</string>
+    <string name="please_wait">Пожалуйста, подождите</string>
+
+    <!-- Network Scanner -->
+    <string name="scan_network">Сканировать</string>
+    <string name="scanning_network">Сканирование…</string>
+    <string name="servers_found">Доступные серверы</string>
+    <string name="no_servers_found">Серверы SMB в локальной сети не найдены.\n\nВы все еще можете ввести данные сервера вручную.</string>
+    <string name="network_scan_instructions">Выберите сервер для автозаполнения данных или нажмите "Сканировать сеть" для поиска других серверов.</string>
+    <string name="scan_complete">Сканирование сети завершено</string>
+    <string name="scan_cancelled">Сканирование сети отменено</string>
+    <string name="scan_error">Ошибка сканирования: %1$s</string>
+    <string name="server_icon">Сервер</string>
+    <string name="selected">Выбрано</string>
+    <string name="hosts_scanned">Просканировано хостов: %1$d / %2$d</string>
+    <string name="currently_scanning">Сканирование: %1$s</string>
+    <string name="servers_found_count">Найдено серверов: %1$d</string>
+    <string name="server_info_applied">Данные сервера применены: %1$s</string>
+    <string name="available_shares">Доступные ресурсы</string>
+    <string name="discovering_shares">Поиск ресурсов…</string>
+    <string name="no_shares_found">На этом сервере ресурсы не найдены</string>
+    <string name="tap_share_to_select">Нажмите на ресурс, чтобы выбрать его:</string>
+    <string name="could_not_connect_check_credentials">Не удалось подключиться к серверу. Проверьте учетные данные.</string>
+    <string name="enter_server_details">Введите данные сервера для поиска ресурсов</string>
+    <string name="scan_network_permission_required">Для сканирования сети требуется разрешение на доступ к местоположению для получения информации о Wi-Fi.</string>
+    <string name="scanning_fallback_networks">Доступ к Wi-Fi ограничен - сканирование стандартных диапазонов сети</string>
+
+    <!-- File Browser Additional Strings -->
+    <string name="go_to_parent_directory">Перейти в родительский каталог</string>
+    <string name="refresh_directory">Обновить каталог</string>
+    <string name="files_tab">Файлы</string>
+    <string name="folders_tab">Папки</string>
+    <string name="empty_folder">Эта папка пуста. Используйте кнопку +, чтобы загрузить файлы или создать папки.</string>
+
+    <!-- Additional UI Strings -->
+    <string name="upload_files">Загрузить файлы</string>
+    <string name="cancel_search_action">Отменить поиск</string>
+    <string name="loading_system_information">Загрузка системной информации…</string>
+    <string name="authentication">Аутентификация</string>
+    <string name="smb_connection">SMB-подключение</string>
+    <string name="add_smb_connection">Добавить SMB-подключение</string>
+    <string name="connect_to_network_share">Подключитесь к вашему сетевому ресурсу</string>
+    <string name="hosts_scan_progress">Просканировано хостов: 0 / 254</string>
+    <string name="progress_percentage">0%</string>
+    <string name="guest_access">Гостевой доступ</string>
+
+    <string name="battery_optimization_title">Оптимизация фоновой работы</string>
+    <string name="battery_optimization_message">Для надежной фоновой загрузки и скачивания по SMB мы рекомендуем исключить приложение из списка оптимизации батареи.\n\nЭто гарантирует, что операции продолжатся, даже когда приложение перейдет в фоновый режим.</string>
+    <string name="open_settings">Открыть настройки</string>
+    <string name="later">Позже</string>
+
+    <!-- Robust Connection Messages -->
+    <string name="connection_recovering">Восстановление соединения…</string>
+    <string name="connection_recovered">Соединение успешно восстановлено</string>
+    <string name="connection_recovery_failed">Не удалось восстановить соединение</string>
+    <string name="connection_timeout">Тайм-аут соединения</string>
+    <string name="connection_broken_pipe">Соединение прервано</string>
+    <string name="connection_retry_attempt">Повторное подключение (попытка %1$d из %2$d)</string>
+
+</resources>
