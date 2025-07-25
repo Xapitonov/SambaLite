@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Upload progress plurals -->
+    <plurals name="upload_progress_files">
+        <item quantity="one">Загружается %1$d файл из %2$d</item>
+        <item quantity="few">Загружается %1$d файла из %2$d</item>
+        <item quantity="many">Загружается %1$d файлов из %2$d</item>
+        <item quantity="other">Загружается %1$d файла из %2$d</item>
+    </plurals>
+
+    <!-- Network scan plurals -->
+    <plurals name="hosts_scanned">
+        <item quantity="one">Просканирован %1$d хост из %2$d</item>
+        <item quantity="few">Просканировано %1$d хоста из %2$d</item>
+        <item quantity="many">Просканировано %1$d хостов из %2$d</item>
+        <item quantity="other">Просканировано %1$d хоста из %2$d</item>
+    </plurals>
+
+    <plurals name="servers_found_count">
+        <item quantity="one">Найден %1$d сервер</item>
+        <item quantity="few">Найдено %1$d сервера</item>
+        <item quantity="many">Найдено %1$d серверов</item>
+        <item quantity="other">Найдено %1$d сервера</item>
+    </plurals>
+</resources>
